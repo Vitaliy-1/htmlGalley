@@ -4,50 +4,19 @@
 	<title>Article</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-  <link rel="stylesheet" type="text/css" href="css/newstyle.css">
-  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/newstyle2.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/forarticle.js" defer></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header>
   </header>
   <main>
-    <div class="set-grid">
-      <div class="title-block">
-        <div class="article-meta">
-          <div class="access-review">
-            <p class="license-access">Open Access</p> 
-            <p class="reviewed">Peer-reviewed</p>
-          </div>
-          <div class="title-authors-etc">
-            <h1 id="artitle-title">
-            The psychological distress and psychic phenomena in cancer patients during palliative care
-            </h1>
-            <ul class="author-list">
-              <li class="name" id="name1"><a href="aff1">Inna R. Mukharovska,</a></li>
-            </ul>
-            <ul class="author-institution">
-              <li class="institution" id="aff1">
-                <span class="authoraff">Affiliation</span>
-              	<p>
-              	 Department of Psychosomatica Medicine and Psychotherapy, Bogomolets National Medical University, Kyiv, Ukraine
-              	 </p>
-              	 <p>
-              	 CLinical Oncological Center, Kyiv, Ukraine
-              	 </p>
-              </li>  
-            </ul>  
-            <ul class="dates">
-              <li class="submitted">Submitted: 2016-09-08</li>
-              <li class="accepted">Accepted: 2016-10-09</li>
-              <li class="published">Published: 2016-11-15</li>
-              <li class="artdoi">DOI: </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="article-body">
-        <nav class="nav">
+    <div class="grid-cell">
+	    <div class="navwraper">
+	    <nav class="nav">
           <ul class="navigation-menu">
             <li class="full-article"><a href="">Article</a></li>
             <li class="figures-data"><a href="">Figures & data</a></li>
@@ -55,20 +24,58 @@
             <li class="mobile-navigation"><a href="">Navigation</a></li>
           </ul>
         </nav>
-        <div class="article-body">
-          <div class="nav-article">
-            <ul class="intra-article-navigation">
-              <li class="intranav"><a id="abstract0" href="#abstract0">Анотація</a></li>
-              <li class="intranav"><a id="sec2" href="#s1">Актуальність</a></li>
-              <li class="intranav"><a id="sec3" href="#s2">Методи та матеріали</a></li>
-              <li class="intranav"><a id="sec4" href="#s3">Результати</a></li>
-              <li class="intranav"><a id="sec5" href="#s4">Обговорення</a></li>
-              <li class="intranav"><a id="sec6" href="#s5">Висновки</a></li>
-              <li class="intranav"><a id="sec7" href="#ack">Виповідження</a></li>
-              <li class="intranav"><a id="sec8" href="#reference">Список використаної літератури</a></li>
-            </ul>
-          </div>
-          <div class="article-content">
+		</div>
+      <div class="container-fluid">
+        <div class="row">
+		  <div class="fornav col-lg-4 col-md-4" role="complementary">
+              <nav class="bs-docs-sidebar" id="myAffix">
+                <ul class="nav bs-docs-sidenav">
+                  <li class="intranav"><a id="sec0" href="#abstract0">Анотація</a></li>
+                  <li class="intranav"><a id="sec1" href="#s1">Актуальність</a></li>
+                  <li class="intranav"><a id="sec2" href="#s2">Методи та матеріали</a></li>
+                  <li class="intranav"><a id="sec3" href="#s3">Результати</a></li>
+                  <li class="intranav"><a id="sec4" href="#s4">Обговорення</a></li>
+                  <li class="intranav"><a id="sec5" href="#s5">Висновки</a></li>
+                  <li class="intranav"><a id="sec6" href="#ack">Виповідження</a></li>
+                  <li class="intranav"><a id="sec7" href="#reference">Список використаної літератури</a></li>
+                </ul>
+             </nav>
+            </div>
+          <div class="forcontent col-lg-8 col-md-8 col-sm-12 col-xs-12" role="main">
+            <div class="article-content">
+	          <div class="title-block">
+                <div class="article-meta">
+                <div class="access-review">
+                  <p class="license-access">Open Access</p> 
+                  <p class="reviewed">Peer-reviewed</p>
+                </div>
+              <div class="title-authors-etc">
+                <h1 id="artitle-title">
+                  The psychological distress and psychic phenomena in cancer patients during palliative care
+                </h1>
+              <ul class="author-list">
+                <li class="name" id="name1"><a href="aff1">Inna R. Mukharovska,</a></li>
+              </ul>
+              <ul class="author-institution">
+                <li class="institution" id="aff1">
+                  <span class="authoraff">Affiliation</span>
+              	    <p>
+              	      Department of Psychosomatica Medicine and Psychotherapy, Bogomolets National Medical University, Kyiv, Ukraine
+              	    </p>
+              	    <p>
+              	      CLinical Oncological Center, Kyiv, Ukraine
+              	    </p>
+                </li>  
+              </ul>  
+              <ul class="dates">
+                <li class="submitted">Submitted: 2016-09-08</li>
+                <li class="accepted">Accepted: 2016-10-09</li>
+                <li class="published">Published: 2016-11-15</li>
+                <li class="artdoi">DOI: </li>
+              </ul>
+              </div>
+                </div>
+              </div>
             <div class="article-text">
               <div class="front">
                 <div class="abstract" id="abstract0">
@@ -91,7 +98,7 @@
                   </p>
                 </div>
                 <div class="keywords">
-                  <h3>Keywords (Ключові слова)</h4>
+                  <h4>Keywords (Ключові слова)</h4>
                   <span class="keyw">psychological stress,</span>
                   <span class="keyw">psychopathological symptoms,</span>
                   <span class="keyw">palliative care patient,</span>
@@ -99,7 +106,7 @@
                   <span class="keyw">palliative medicine</span>
                 </div>
                 <div class="abbreviations">
-                <h3>Abbreviations (Абревіатури)</h4>
+                <h4>Abbreviations (Абревіатури)</h4>
                   <span class="abbrev">SCL-90r, Symptom CheckList-90-Revised;</span>
                   <span class="abbrev">MS Excel, Microsoft Excel</span>
                 </div>
@@ -135,7 +142,7 @@
                    Результати
                  </h2>
                  <p class="for-sections">
-                 Провідними психопатологічними проявами у онкохворих на етапі паліативного лікування були соматизація {0,68±0,04 балів} та симптоми депресивного кола (0,45±0,05 балів), що доповнювалися різноманітною неспецифічною симптоматикою (0,56±0,06 балів), табл. 1. Соматизація проявлялася запамороченням, відчуттям слабкості у різних частинах тіла, алгіями (головні болі, кардіоалгії, люмбалгії, міалгії), розладами травлення, парестезіями, тяжкістю у кінцівках. Депресивна симптоматика виражалася у пригніченому настрої, втраті інтересу до звичних справ, відчутті, що дії потребують прикладення надмірних зусиль, самотності, упадку сил та загальмованості. Неспецифічні психопатологічні прояви були представлені у вигляді розладів сну, погіршення апетиту, почуття провини, думок про смерть (<xref ref-type="table" rid="tbl1">Таблиця 1</xref>).
+                 Провідними психопатологічними проявами у онкохворих на етапі паліативного лікування були соматизація {0,68±0,04 балів} та симптоми депресивного кола (0,45±0,05 балів), що доповнювалися різноманітною неспецифічною симптоматикою (0,56±0,06 балів), табл. 1. Соматизація проявлялася запамороченням, відчуттям слабкості у різних частинах тіла, алгіями (головні болі, кардіоалгії, люмбалгії, міалгії), розладами травлення, парестезіями, тяжкістю у кінцівках. Депресивна симптоматика виражалася у пригніченому настрої, втраті інтересу до звичних справ, відчутті, що дії потребують прикладення надмірних зусиль, самотності, упадку сил та загальмованості. Неспецифічні психопатологічні прояви були представлені у вигляді розладів сну, погіршення апетиту, почуття провини, думок про смерть (<a href="tbl1" class="reftable" id="table1">Таблиця 1</a>).
                  </p>
                  <p class="for-sections">
                  Були присутніми, однак менш вираженими, прояви тривоги - 0,36±0,04 балів, ворожості - 0,37±0,08 балів та паранояльності - 0,35±0,08 балів. Психопатологічна тривога проявлялася у нервовості, напруженості, почутті страху, очікуванні поганого, страхітливих думках, ворожість – легко виникаючій досаді та роздратуванні, спалахах гніву, суперечках, паранояльність – відчутті недовіри до оточення, що інші за ними спостерігають, обговорюють їх, звинуваченні людей у своїх неприємностях, були присутні ідеї, які інші не поділяли. Ворожість та паранояльність можна було змістовно пов’язати з психологічним етапом переживання хвороби – стадією гніву, коли людина, яка постала перед складним діагнозом, перебувала у пошуку причин та винних, що часто проявлялося агресивними висловами, вимогами, недовірою та конфліктами з оточенням, як способу спроектувати внутрішню напругу та винести її за межі свого "Я".
@@ -148,7 +155,7 @@
                  </p>
                  <div class="figure-wrap">
                    <div class="fig-box" id="tbl1">
-                     <h5 class=table-title>
+                     <h5 class="table-title">
                      <strong>Таблиця 1. </strong>Вираженість психопатологічних симптомів у пацієнтів з онкопатологією на паліативному етапі лікування, х ± m
                      </h5>
                      <table>
@@ -200,7 +207,7 @@
                          </tr>
                        </tbody>
                      </table> 
-                     <p class"caption">
+                     <p class="caption">
                      </p> 
                    </div>
                  </div>  
@@ -215,10 +222,10 @@
                  <p class="for-sections">
                  Потреба у сторонній допомозі у зв’язку з погіршенням фізичного стану та обмеженням власних можливостей самообслуговування зростала, що обумовлювало появу виражених психологічних реакцій. Основними психологічними проблемами у пацієнтів, пов’язаними з доглядом були:
                  </p>
-                 <ul class=intext1>
-                   <li><p class=inlist>прогресивна втрата контролю над власним тілом та функціями організму нагадувала про летальність захворювання і відповідно викликала появу психологічних симптомів;</p></li>
-                   <li><p class=inlist>необхідність звернення за сторонньою допомогою активізували аспекти, пов’язані з сором’язливістю, страхом відмови у допомозі, установкою «покладатися лише на себе», звичкою «не обтяжувати інших», запереченням потреби у сторонній допомозі;</p></li>
-                   <li><p class=inlist>власне інтенсивна психоемоційна реакція на соматичний дистрес та спричинені ним обмеження.</p></li>
+                 <ul class="intext1">
+                   <li><p class="inlist">прогресивна втрата контролю над власним тілом та функціями організму нагадувала про летальність захворювання і відповідно викликала появу психологічних симптомів;</p></li>
+                   <li><p class="inlist">необхідність звернення за сторонньою допомогою активізували аспекти, пов’язані з сором’язливістю, страхом відмови у допомозі, установкою «покладатися лише на себе», звичкою «не обтяжувати інших», запереченням потреби у сторонній допомозі;</p></li>
+                   <li><p class="inlist">власне інтенсивна психоемоційна реакція на соматичний дистрес та спричинені ним обмеження.</p></li>
                  </ul>
                  <p class="for-sections">
                    Виділено два типи дезадаптивних реакцій у онкохворих, пов’язаних з ситуацією паліативного лікування: дисимулятивний та гіперактивний варіанти. При дисимулятивному типі пацієнти переживали інтенсивне почуття провини за свою хворобу, вважали себе тягарем для родини і відповідно намагалися обмежити участь родичів у догляді за собою, практично не пред’являли скарг або приховували симптоми захворювання під час лікарських оглядів {дисимулювали}, в них домінували емоції пригнічення, апатії. Гіперактивний тип проявлявся посиленою активністю хворого щодо лікування та догляду, пацієнти вимагали до себе уваги, наголошували на особливості своєї ситуації, на огляді лікаря пред’являли численні скарги, були схильні звинувачувати як рідних так і медичний персонал у бездіяльності, домінували емоцій гніву та роздратування.
@@ -398,11 +405,11 @@
              </div>
             </div>
           </div>
-        </div>
+          </div>
+		    
+        </div>	  
       </div>
-      <aside class="right-aside">
-      </aside>
-    </div>
+	</div>
   </main>
   <footer>
   </footer>

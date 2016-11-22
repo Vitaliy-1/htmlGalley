@@ -31,8 +31,8 @@ div.article-content {
 
 /* Intra Article Navigation*/
 
-div.nav-article {
-	position: static;
+nav.bs-docs-sidebar.hidden-print.hidden-sm.hidden-xs.affix-top {
+	position: fixed;
 	top: 90px;
 	float: left;
 	width: 180px;
@@ -43,11 +43,11 @@ div.nav-article {
 	margin-top: 90px;
 }
 
-ul.intra-article-navigation {
+ul.nav.bs-docs-sidenav {
 	display: block;
 	list-style: none;
 	margin-left: 0;
-	margin-bottom: 10px;
+	margin-bottom: 0;
 	margin-right: 0;
 	padding-bottom: 10px;
 	font-size: 13px;
@@ -63,14 +63,28 @@ ul > li.intranav > a {
 
 ul > li.intranav {
 	padding-left: 10px;
-	margin-bottom: 10px;
+}
+
+div.article-body-main {
+	position: static;
 }
 
 aside.right-aside {
-	display: none;
+	display: block;
 	float: right;
 	margin-right: 1.25rem;
     width: 10rem;
+}
+
+div.col-md-3 {
+	position: relative;
+	float: left;
+	clear: both;
+}
+
+div.article-body-main {
+	position: relative;
+	clear: both;
 }
 
 h1 {

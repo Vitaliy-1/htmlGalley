@@ -1,0 +1,32 @@
+/* sticky inarticle navigation */
+
+.fornav {	
+	float: right;	
+}
+
+nav.bs-docs-sidebar {
+	
+}
+
+.affix-top {
+	margin-top: 300px;
+}
+
+.affix {
+	margin-top: 0;
+}
+
+/* Headings */
+
+h1 {
+	font-family: albert;
+	font-size: 28px;
+}
+
+h2 {
+	font-size: 21px;
+}
+
+h3{
+	font-size: 17px;
+}
