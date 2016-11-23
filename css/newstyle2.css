@@ -9,12 +9,20 @@ nav.bs-docs-sidebar {
 }
 
 .affix-top {
-	margin-top: 300px;
+	margin-top: 400px;
 }
 
-.affix {
+nav.bs-docs-sidebar.affix {
 	margin-top: 0;
+	position: fixed!important;
 }
+
+@media (max-width:991px) {
+	.fornav {
+		display: none;
+	}
+}
+
 
 /* Headings */
 
@@ -29,4 +37,35 @@ h2 {
 
 h3{
 	font-size: 17px;
+}
+
+
+/* Bootstrap tabs */
+
+.navwraper {
+	padding-left: 0;
+}
+
+@media (min-width:992px) {
+	li.mobile-navigation {
+		display: none;
+	}
+}
+
+
+/* Open Access Label */
+
+div.access-review {
+	margin-top: 20px;
+}
+
+p.license-access, p.reviewed {
+	display: inline-block;
+	font-family: albert;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+p.license-access {
+	padding-right: 10px;
 }
