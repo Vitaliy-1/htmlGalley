@@ -41,5 +41,9 @@ $(document).ready(function(){
 });
 
 $("a[href='#figuresdata']").click(function() {
-  $("#navwrap").css("display","none");
+  $("#myAffix").css("display","none");
+});
+
+$("a[href='#article']").click(function() {
+  $("#myAffix").css("display","block");
 });
