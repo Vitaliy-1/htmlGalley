@@ -75,4 +75,5 @@ p.license-access {
 
 a.ref-tip {
 	cursor: pointer;
+	white-space: nowrap;
 }
