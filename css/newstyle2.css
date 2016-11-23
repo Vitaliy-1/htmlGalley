@@ -69,3 +69,10 @@ p.license-access, p.reviewed {
 p.license-access {
 	padding-right: 10px;
 }
+
+
+/* pop-ups */
+
+a.ref-tip {
+	cursor: pointer;
+}

@@ -40,10 +40,35 @@ $(document).ready(function(){
     });
 });
 
+
+/* Hide inra-navigation on figures click */
+
 $("a[href='#figuresdata']").click(function() {
   $("#myAffix").css("display","none");
 });
 
-$("a[href='#article']").click(function() {
-  $("#myAffix").css("display","block");
-});
+/* Reference pop-ups */
+
+
+$(function () {
+  $('[class="ref-tip"]').tooltip()
+})
+
+
+var bibArr = jQuery.makeArray(document.getElementsByClassName("bib"));
+
+for (var i = 0; i < bibArr.length; i++) {
+	bibArr[i] = bibArr[i].innerText;
+    var p = i + 1;
+	$("[rid='bib" + p + "']").attr("title", bibArr[i]);
+}
+
+
+
+/*
+bibArr[0] = bibArr[0].innerText;
+$("[reference=1]")[0].setAttribute("title", bibArr[0]);
+
+bibArr[1] = bibArr[1].innerText;
+$("[reference=2]")[0].setAttribute("title", bibArr[1]);
+*/
