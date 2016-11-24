@@ -49,35 +49,19 @@ $("a[href='#figuresdata']").click(function() {
 
 /* Reference pop-ups */
 
-/*
 
 $(function () {
-  $('[class="ref-tip"]').tooltip()
-})
-
-
-var bibArr = jQuery.makeArray(document.getElementsByClassName("bib"));
-
-for (var i = 0; i < bibArr.length; i++) {
-	bibArr[i] = bibArr[i].innerText;
-      var p = i + 1;
-  	$("[rid='bib" + p + "']").attr("title", bibArr[i]);
-}
-
-*/
-
-$(function () {
-  $('[class="ref-tip btn btn-default"]').popover()
+  $('[class="ref-tip btn btn-info"]').popover()
 });
 
-/*
-$("button.ref-tip.btn.btn-default").attr("data-placement", "top");
 
-var myText = $("span.bib#bib1").html();
+$('[class="ref-tip btn btn-info"]').attr("data-placement", "top");
+$('[class="ref-tip btn btn-info"]').attr("tabindex", "0");
+$('[class="ref-tip btn btn-info"]').attr("role", "button");
+$('[class="ref-tip btn btn-info"]').attr("data-trigger", "click");
 
-$(myText).appendTo("body");
-*/
-$('[class="ref-tip btn btn-default"]').attr("data-placement", "top")
+
+
 
 var refAuth = jQuery.makeArray(document.getElementsByClassName("ref-auth"));
 var refTitle = jQuery.makeArray(document.getElementsByClassName("ref-title"));
@@ -90,11 +74,11 @@ for (var i = 0; i < refAuth.length; i++) {
   refTitle[i] = refTitle[i].innerHTML;
   refSource[i] = refSource[i].innerHTML;
   refInfo[i] = refInfo[i].innerHTML;
-  refFullText[i] = refFullText[i].interHTML;
+  refFullText[i] = refFullText[i].innerHTML;
 };
   
 for (var i = 0; i < refAuth.length; i++) {
-    output = [refAuth[i] + refSource[i] + refInfo[i]];
+    output = [refAuth[i] + ' ' + refSource[i] + ' ' + refInfo[i]];
     for (var s = 0; s < output.length; s++) {
      var p = i + 1;
     $("[rid='bib" + p + "']").attr("data-content", output);
@@ -104,6 +88,7 @@ for (var i = 0; i < refAuth.length; i++) {
 for (var i = 0; i < refTitle.length; i++) {
       var p = i + 1;
     $("[rid='bib" + p + "']").attr("title", refTitle[i]);
-}
+};
+
 
 
