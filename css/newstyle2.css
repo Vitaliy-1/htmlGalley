@@ -77,3 +77,11 @@ a.ref-tip {
 	cursor: pointer;
 	white-space: nowrap;
 }
+
+button.btn.btn-default {
+	padding: 0 2px 0 2px;
+}
+
+div.article-text {
+	line-height: 1.6;
+}
