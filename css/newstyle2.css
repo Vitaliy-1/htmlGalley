@@ -77,3 +77,14 @@ a.ref-tip {
 	cursor: pointer;
 	white-space: nowrap;
 }
+
+a.btn.btn-info {
+	padding: 0 6px 0 6px;
+	border: 0;
+	background: rgba(91, 192, 222, 0.2);
+	color: black;
+}
+
+div.article-text {
+	line-height: 1.6;
+}
