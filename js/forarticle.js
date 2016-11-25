@@ -44,11 +44,11 @@ $(document).ready(function(){
 /* Hide inra-navigation on figures click */
 
 $("a[href='#figuresdata']").click(function() {
-  $("#myAffix").css("display","none");
+  $("#myAffix").css("visibility","hidden");
 });
 
 $("a[href='#article']").click(function() {
-  $("#myAffix").css("display","block");
+  $("#myAffix").css("visibility","visible");
 });
 
 /* Reference pop-ups */
