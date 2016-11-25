@@ -47,6 +47,10 @@ $("a[href='#figuresdata']").click(function() {
   $("#myAffix").css("display","none");
 });
 
+$("a[href='#article']").click(function() {
+  $("#myAffix").css("display","block");
+});
+
 /* Reference pop-ups */
 
 
@@ -58,7 +62,7 @@ $(function () {
 $('[class="ref-tip btn btn-info"]').attr("data-placement", "top");
 $('[class="ref-tip btn btn-info"]').attr("tabindex", "0");
 $('[class="ref-tip btn btn-info"]').attr("role", "button");
-$('[class="ref-tip btn btn-info"]').attr("data-trigger", "click");
+$('[class="ref-tip btn btn-info"]').attr("data-trigger", "hover");
 
 
 
@@ -89,6 +93,5 @@ for (var i = 0; i < refTitle.length; i++) {
       var p = i + 1;
     $("[rid='bib" + p + "']").attr("title", refTitle[i]);
 };
-
 
 

@@ -88,3 +88,35 @@ a.btn.btn-info {
 div.article-text {
 	line-height: 1.6;
 }
+
+/* page width */
+
+body {
+	background-color: #ececec;
+}
+
+.grid-cell {
+	background-color: white;
+	-webkit-box-shadow: 0px 0px 78px -8px rgba(0,0,0,0.82);
+    -moz-box-shadow: 0px 0px 78px -8px rgba(0,0,0,0.82);
+    box-shadow: 0px 0px 78px -8px #AAAAAA;
+    padding: 10px;
+    margin: 20px 100px 100px 100px;
+}
+
+#myAffix {
+	background-color: white;
+     -webkit-box-shadow: 0px 0px 78px -8px rgba(0,0,0,0.82);
+    -moz-box-shadow: 0px 0px 78px -8px rgba(0,0,0,0.82);
+    box-shadow: 0px 9px 5px 0px #AAAAAA;	
+    width: 240.703px;
+}
+
+.row.tab-content {
+	
+}
+
+.forcontent {
+	background-color: white;
+	box-shadow: 3px 9px 5px 0px #AAAAAA;
+}
