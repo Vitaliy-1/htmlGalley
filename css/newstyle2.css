@@ -9,7 +9,7 @@ nav.bs-docs-sidebar {
 }
 
 .affix-top {
-	margin-top: 400px;
+	margin-top: 500px;
 }
 
 nav.bs-docs-sidebar.affix {
@@ -21,6 +21,13 @@ nav.bs-docs-sidebar.affix {
 	.fornav {
 		display: none;
 	}
+}
+
+nav > ul > .intranav > a {
+	color: #767676;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	font-family: 'Helvetica Neue';
 }
 
 
@@ -133,4 +140,14 @@ body {
 
 .navwraper {
 	border-right: 1px solid #ececec;
+}
+
+/* Tables */
+
+.tab-pane.fade.active.in > .figure-wrap {
+	margin-top: 50px;
+}
+
+th {
+	text-align: center;
 }
