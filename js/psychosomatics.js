@@ -80,9 +80,7 @@ var refInfo = jQuery.makeArray(document.getElementsByClassName("ref-info"));
 var refFullText = jQuery.makeArray(document.getElementsByClassName("ref-full"));
 
 for (var i = 0; i < refAuth.length; i++) {
-  //refAuth[i] = refAuth[i].innerHTML;
   refTitle[i] = refTitle[i].innerHTML;
-  //refSource[i] = refSource[i].innerHTML;
   refFullText[i] = refFullText[i].innerHTML;
 };
   
@@ -105,36 +103,73 @@ $('table').attr("class", "table table-striped table-bordered");
 
 /* collapseble menu */
 
+function refresh() {
+   ww = $(window).width();
+   var w =  ww<limit ? (location.reload(true)) :  ( ww>limit ? (location.reload(true)) : ww=limit );
+}
 
-$("div.article-text").attr("id", "accordion");
-$("div.article-text").attr("role", "tablist");
-$("div.article-text").attr("aria-multiselectable", "true");
-$("div.article-text").attr("class", "article-text panel-group");
+(function (p) {
+  if ($(window).width() <= 974) {
+    $("div.article-text").attr({
+      id: "accordion",
+      role: "tablist",
+      "aria-multiselectable": "true",
+      class: "article-text panel-group"
+    });
 
-$("div.front").attr("class", "front panel panel-default");
+    $("div.front").attr("class", "front panel panel-default");
 
-$("div.section.abstract").attr({
-  role: "button",
-  "data-toggle": "collapse",
-  href: "#collapse1",
-  "data-parent": "#accordion",
-  class: "section abstract panel-heading"
+    $("div.panwrap").each(function(i) {
+    $(this).attr("class", "panwrap panel panel-default")
+    });
+
+    $("h2.title").each(function() {
+    $(this).attr("class", "title panel-title collapsed")
+    });
+
+    $("div.section").each(function(i) {
+    $(this).attr("href", "#collapse" + i)
+    });
+
+    $("div.forpan").each(function(i) {
+    $(this).attr("id", "collapse" + i)
+      if (i==0) {
+        $(this).attr("class", "forpan panel-collapse collapse in")
+        } else {$(this).attr("class", "forpan panel-collapse collapse")}
+      });
+
+    $("div.section").each(function(i) {
+      if (i==0) {
+        $(this).attr("aria-expanded", "true")
+        } else {$(this).attr("aria-expanded", "false")}
+      });
+
+    $("div.section").each(function(i) {
+      $(this).attr({
+        id: "s" + i,
+        role: "button",
+        "data-toggle": "collapse",
+        "data-parent": "#accordion",
+    });
+      if (i==0) {
+        $(this).attr("class", "section abstract panel-heading")
+        } else {$(this).attr("class", "section panel-heading")}
+    });
+    
+  } else {return false}
+})(jQuery); //end of if 
+  
+var ww = $(window).width();
+var limit = 974;
+
+var tOut;
+$(window).resize(function() {
+    var resW = $(window).width();
+    clearTimeout(tOut);
+    if ( (ww>limit && resW<limit) || (ww<limit && resW>limit) ) {        
+        tOut = setTimeout(refresh, 0);
+    }
 });
 
-$("h2.title").each(function() {
-  $(this).attr("class", "title panel-title collapsed")
-});
 
-$("div.section").each(function(i) {
-  $(this).attr("href", "#collapse" + i)
-});
 
-$("div.forpan").each(function(i) {
-  $(this).attr("id", "collapse" + i)
-});
-
-$("div.forpan").each(function(i) {
-  if (i==0) {
-    $(this).attr("class", "forpan panel-collapse collapse in")
-  } else {$(this).attr("class", "forpan panel-collapse collapse")}
-});
