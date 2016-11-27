@@ -101,7 +101,8 @@ for (var i = 0; i < refTitle.length; i++) {
 
 $('table').attr("class", "table table-striped table-bordered");
 
-/* collapseble menu */
+
+/* Collapseble menu. Disable on desktop */
 
 function refresh() {
    ww = $(window).width();
@@ -172,4 +173,77 @@ $(window).resize(function() {
 });
 
 
+/* Scroll to head of section */
+
+(function($) {
+    $.fn.goTo = function() {
+        $('html, body').animate({
+            scrollTop: $(this).offset().top + 'px'
+        }, 'fast');
+        
+    }
+})(jQuery);
+
+/*
+var collapseNumber = jQuery.makeArray(document.getElementsByClassName("panel panel-default"));
+
+for (var i = 0; i < collapseNumber.length; i++) {
+
+  $('#collapse' + i).on('shown.bs.collapse', function () {
+     $('#s' + i).goTo();  
+   });
+}
+*/
+
+/* There is a need to write a cycle */
+
+
+
+$('#collapse1').on('shown.bs.collapse', function () {
+     $('#s1').goTo();  
+});
+
+$('#collapse2').on('shown.bs.collapse', function () {
+     $('#s2').goTo();  
+});
+
+$('#collapse3').on('shown.bs.collapse', function () {
+     $('#s3').goTo();  
+});
+
+$('#collapse4').on('shown.bs.collapse', function () {
+     $('#s4').goTo();  
+});
+
+$('#collapse5').on('shown.bs.collapse', function () {
+     $('#s5').goTo();  
+});
+
+$('#collapse6').on('shown.bs.collapse', function () {
+     $('#s6').goTo();  
+});
+
+$('#collapse7').on('shown.bs.collapse', function () {
+     $('#s7').goTo();  
+});
+
+$('#collapse8').on('shown.bs.collapse', function () {
+     $('#s8').goTo();  
+});
+
+$('#collapse9').on('shown.bs.collapse', function () {
+     $('#s9').goTo();  
+});
+
+$('#collapse10').on('shown.bs.collapse', function () {
+     $('#s10').goTo();  
+});
+
+$('#collapse11').on('shown.bs.collapse', function () {
+     $('#s11').goTo();  
+});
+
+$('#collapse12').on('shown.bs.collapse', function () {
+     $('#s12').goTo();  
+});
 
