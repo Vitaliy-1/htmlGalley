@@ -13,11 +13,14 @@ $("div.article-content h2").each(function(i) {
         current.html() + "</a></li>");
 });
 
+
 $('#myAffix').affix({
   offset: {
-    top: 500,
+    top: function () {
+      return (this.top = $('#title0').outerWidth(true))
+    },
     bottom: function () {
-      return (this.bottom = $('.ref-list').outerHeight(true))
+      return (this.bottom = $('h2.title:last').outerHeight(true))
     }
   }
 });
@@ -95,6 +98,15 @@ for (var i = 0; i < refTitle.length; i++) {
       var p = i + 1;
     $("[rid='bib" + p + "']").attr("title", refTitle[i]);
 };
+
+/* Author popover */
+$("[ref='aff1'").hover(function(){
+        $("[iid='aff1']").show();
+      },
+      function() {
+        $("[iid='aff1']").hide();
+      
+    });
 
 
 /* Tables */
