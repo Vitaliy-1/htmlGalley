@@ -4,9 +4,18 @@
 
 /* Bootstrap intra-article navigation */
 
+$("nav.bs-docs-sidebar").prepend("<ul class='nav bs-docs-sidenav'></ul>");
+
+$("div.article-content h2").each(function(i) {
+    var current = $(this);
+    current.attr("id", "title" + i);
+    $(".nav.bs-docs-sidenav").append("<li><a id='link" + i + "' href='#title" + i + "'class='" + current.prop("tagName") + "'>" + 
+        current.html() + "</a></li>");
+});
+
 $('#myAffix').affix({
   offset: {
-    top: 400,
+    top: 500,
     bottom: function () {
       return (this.bottom = $('.ref-list').outerHeight(true))
     }
@@ -71,17 +80,16 @@ var refInfo = jQuery.makeArray(document.getElementsByClassName("ref-info"));
 var refFullText = jQuery.makeArray(document.getElementsByClassName("ref-full"));
 
 for (var i = 0; i < refAuth.length; i++) {
-  refAuth[i] = refAuth[i].innerHTML;
+  //refAuth[i] = refAuth[i].innerHTML;
   refTitle[i] = refTitle[i].innerHTML;
-  refSource[i] = refSource[i].innerHTML;
+  //refSource[i] = refSource[i].innerHTML;
   refFullText[i] = refFullText[i].innerHTML;
 };
   
 for (var i = 0; i < refAuth.length; i++) {
-    output = [refAuth[i] + ' ' + refSource[i]];
+    output = [refAuth[i].innerHTML + ' ' + refSource[i].innerHTML];
     for (var s = 0; s < output.length; s++) {
-     var p = i + 1;
-    $("[rid='bib" + p + "']").attr("data-content", output);
+    $("[rid='bib" + (i + 1) + "']").attr("data-content", output);
     }
 };
  
@@ -94,3 +102,39 @@ for (var i = 0; i < refTitle.length; i++) {
 /* Tables */
 
 $('table').attr("class", "table table-striped table-bordered");
+
+/* collapseble menu */
+
+
+$("div.article-text").attr("id", "accordion");
+$("div.article-text").attr("role", "tablist");
+$("div.article-text").attr("aria-multiselectable", "true");
+$("div.article-text").attr("class", "article-text panel-group");
+
+$("div.front").attr("class", "front panel panel-default");
+
+$("div.section.abstract").attr({
+  role: "button",
+  "data-toggle": "collapse",
+  href: "#collapse1",
+  "data-parent": "#accordion",
+  class: "section abstract panel-heading"
+});
+
+$("h2.title").each(function() {
+  $(this).attr("class", "title panel-title collapsed")
+});
+
+$("div.section").each(function(i) {
+  $(this).attr("href", "#collapse" + i)
+});
+
+$("div.forpan").each(function(i) {
+  $(this).attr("id", "collapse" + i)
+});
+
+$("div.forpan").each(function(i) {
+  if (i==0) {
+    $(this).attr("class", "forpan panel-collapse collapse in")
+  } else {$(this).attr("class", "forpan panel-collapse collapse")}
+});

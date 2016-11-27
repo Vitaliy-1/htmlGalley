@@ -23,7 +23,7 @@ nav.bs-docs-sidebar.affix {
 	}
 }
 
-nav > ul > .intranav > a {
+nav > ul > li > a.H2 {
 	color: #767676;
 	padding-bottom: 5px;
 	padding-top: 5px;
@@ -150,4 +150,54 @@ body {
 
 th {
 	text-align: center;
+}
+
+
+/* For Tablets abd Mobile */
+/* Collapsible accordion panels*/
+@media (max-width: 991px) {
+
+div.panel {
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.forcontent {
+	border-right: none;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+.article-content {
+	padding-left: 0;
+}
+
+div.article-sections > div.panel.panel-default {
+	margin-top: 12px;
+}
+}
+
+
+@media (max-width: 767px) {
+.article-content {
+	padding-left: 0; 
+}
+
+.forcontent {
+	padding: 0 5px 0 5px;
+}
+.grid-cell {
+    padding: 0;
+    margin: 0;
+}
+
+div.panel-body {
+	padding: 5px;
+}
+
+div.article-sections > div.panel.panel-default {
+	margin-top: 12px;
+}
+
 }
