@@ -41,13 +41,13 @@ ul.nav.nav-tabs.bs-docs-sidenav > li {
 }
 
 .affix-top {
-	visibility: hidden;
 	margin-top: 600px;
 }
 
 nav.bs-docs-sidebar.affix {
 	margin-top: 0;
 	position: fixed!important;
+	margin-left: 20px;
 }
 
 @media (max-width:991px) {
@@ -62,7 +62,22 @@ nav > ul > li > a.H2 {
 	padding-top: 5px;
 	font-family: 'Helvetica Neue';
 }
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	border: 0;
+	border-left: 1px solid #563d7c;
+	color: #563d7c;
+	font-size: 120%;
+	cursor: pointer;
+	background-color: white;
+	border-radius: 0;
+}
 
+ul#navblock.nav.nav-tabs.bs-docs-sidenav > li > a:hover {
+	background-color: white;
+	border: 0;
+	border-left: 1px solid #563d7c;
+	border-radius: 0;
+}
 
 /* Headings */
 
@@ -135,9 +150,8 @@ div.article-text {
 
 /* page width */
 
-body {
-	background-color: #ececec;
-}
+
+
 
 .grid-cell {
 	background-color: white;
