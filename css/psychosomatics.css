@@ -62,7 +62,7 @@ nav > ul > li > a.H2 {
 	padding-top: 5px;
 	font-family: 'Helvetica Neue';
 }
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+.nav-tabs>li.active>a.H2, .nav-tabs>li.active>a.H2:focus, .nav-tabs>li.active>a.H2:hover {
 	border: 0;
 	border-left: 1px solid #563d7c;
 	color: #563d7c;
