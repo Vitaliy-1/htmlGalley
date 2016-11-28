@@ -151,6 +151,7 @@ function refresh() {
         } else {$(this).attr("class", "forpan panel-collapse collapse")}
       });
 
+
     $("div.section").each(function(i) {
       if (i==0) {
         $(this).attr("aria-expanded", "true")
@@ -196,21 +197,19 @@ $(window).resize(function() {
     }
 })(jQuery);
 
-/*
+
+
+/* There is a need to write a cycle */
+
 var collapseNumber = jQuery.makeArray(document.getElementsByClassName("panel panel-default"));
-
-for (var i = 0; i < collapseNumber.length; i++) {
-
+for (let i = 0; i < collapseNumber.length; i++) {
   $('#collapse' + i).on('shown.bs.collapse', function () {
      $('#s' + i).goTo();  
    });
 }
-*/
-
-/* There is a need to write a cycle */
 
 
-
+/*
 $('#collapse1').on('shown.bs.collapse', function () {
      $('#s1').goTo();  
 });
@@ -258,7 +257,7 @@ $('#collapse11').on('shown.bs.collapse', function () {
 $('#collapse12').on('shown.bs.collapse', function () {
      $('#s12').goTo();  
 });
-
+*/
 /*Scroll-spy */
 
 

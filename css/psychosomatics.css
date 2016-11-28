@@ -42,6 +42,7 @@ ul.nav.nav-tabs.bs-docs-sidenav > li {
 
 .affix-top {
 	margin-top: 600px;
+	margin-left: 20px;
 }
 
 nav.bs-docs-sidebar.affix {
