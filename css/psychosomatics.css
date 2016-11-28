@@ -1,3 +1,7 @@
+body {
+	position: relative;
+}
+
 /* Styling article metadata */
 ul.author-list {
     list-style-type: none;
@@ -32,11 +36,12 @@ a[ref] {
 	float: right;	
 }
 
-nav.bs-docs-sidebar {
-	
+ul.nav.nav-tabs.bs-docs-sidenav > li {
+	float: none;
 }
 
 .affix-top {
+	visibility: hidden;
 	margin-top: 600px;
 }
 

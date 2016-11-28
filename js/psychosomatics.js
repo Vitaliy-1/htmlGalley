@@ -4,7 +4,7 @@
 
 /* Bootstrap intra-article navigation */
 
-$("nav.bs-docs-sidebar").prepend("<ul class='nav bs-docs-sidenav'></ul>");
+$("nav.bs-docs-sidebar").prepend("<ul class='nav nav-tabs bs-docs-sidenav' id='navblock' role='tablist'></ul>");
 
 $("div.article-content h2").each(function(i) {
     var current = $(this);
@@ -259,3 +259,12 @@ $('#collapse12').on('shown.bs.collapse', function () {
      $('#s12').goTo();  
 });
 
+/*Scroll-spy */
+
+
+
+$('[data-spy="scroll"]').each(function () {
+  var $spy = $(this).scrollspy('refresh')
+})
+
+$('body').scrollspy({ target: 'myAffix' })
