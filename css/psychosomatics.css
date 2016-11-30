@@ -1,11 +1,14 @@
 body {
 	position: relative;
 }
+.panel-body {
+	padding-left: 0px;
+}
 
 /* Styling article metadata */
 ul.author-list {
     list-style-type: none;
-    padding-left: 12px;
+    padding-left: 0px;
 }
 .name {
 	float: left;
@@ -16,7 +19,7 @@ ul.author-list {
 	clear: both;
 }
 
-a[ref] {
+a.auth-name {
 	cursor: pointer;
 }
 
@@ -27,8 +30,9 @@ a[ref] {
 
 .dates {
 	list-style-type: none;
-	padding-left: 15px;
+	padding-left: 0px;
 	margin-top: 20px;
+	font-family: albert;
 }
 /* sticky inarticle navigation */
 
@@ -95,9 +99,7 @@ h3{
 	font-size: 17px;
 }
 
-div.section {
-	padding-left: 15px;
-}
+
 
 /* Bootstrap tabs */
 
@@ -205,15 +207,14 @@ th {
 
 
 /* For Tablets abd Mobile */
+/**************************************************************************/
 /* Collapsible accordion panels*/
 @media (min-width: 1100px) and (max-width: 1300px) {
 div.grid-cell {
     padding: 10px;
     margin: 2% 6% 6% 6%;
 }
-div.section {
-	padding-left: 15px;
-}
+
 }
 
 @media (min-width: 992px) and (max-width: 1099px) {
@@ -279,3 +280,5 @@ div.article-sections > div.panel.panel-default {
 }
 
 }
+
+/* Floating Main Menu */
