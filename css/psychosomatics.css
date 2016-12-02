@@ -205,6 +205,33 @@ th {
 	text-align: center;
 }
 
+/* Info Panel */
+
+div#infodata > ul.author-list > li.name {
+	display: block;
+	float: none;
+}
+
+div#infodata div.institution {
+	display: block;
+	padding-left: 0;
+}
+
+div#infodata li.name {
+    padding-bottom: 20px;
+}
+
+div#infodata ul.author-list {
+	margin-top: 40px;
+}
+
+.info-auth-heading {
+    font-weight: bold;
+    font-family: "Helvetica Neue";
+}
+
+
+
 
 /* For Tablets abd Mobile */
 /**************************************************************************/
@@ -285,27 +312,26 @@ div.article-sections > div.panel.panel-default {
 
 /* Floating Main Menu */
 
-/* Info Panel */
+@media (max-width: 767px) {
 
-div#infodata > ul.author-list > li.name {
-	display: block;
-	float: none;
+.navwraper.col-lg-7.col-md-7.col-sm-12.col-xs-12 {
+	position: relative;
+	min-height: 40px;
 }
 
-div#infodata div.institution {
-	display: block;
-	padding-left: 0;
+nav.navigational-tabs {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background-color: white;
+}
+.panel {
+	border-right: 0;
+	border-left: 0;
+}
+div.section {
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+}
 }
 
-div#infodata li.name {
-    padding-bottom: 20px;
-}
-
-div#infodata ul.author-list {
-	margin-top: 40px;
-}
-
-.info-auth-heading {
-    font-weight: bold;
-    font-family: "Helvetica Neue";
-}
