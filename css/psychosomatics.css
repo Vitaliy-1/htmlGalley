@@ -222,9 +222,6 @@ div.grid-cell {
     padding: 10px;
     margin: 2% 2% 6% 2%;
 }
-div.section {
-	padding-left: 15px;
-}
 }
 
 @media (max-width: 991px) {
@@ -251,6 +248,10 @@ div.grid-cell {
     margin: 2% 6% 2% 6%;
 }
 
+div.panel-body {
+	padding-left: 10px;
+}
+
 
 div.article-sections > div.panel.panel-default {
 	margin-top: 12px;
@@ -273,6 +274,7 @@ div.article-sections > div.panel.panel-default {
 
 div.panel-body {
 	padding: 5px;
+	padding-left: 10px;
 }
 
 div.article-sections > div.panel.panel-default {
@@ -282,3 +284,28 @@ div.article-sections > div.panel.panel-default {
 }
 
 /* Floating Main Menu */
+
+/* Info Panel */
+
+div#infodata > ul.author-list > li.name {
+	display: block;
+	float: none;
+}
+
+div#infodata div.institution {
+	display: block;
+	padding-left: 0;
+}
+
+div#infodata li.name {
+    padding-bottom: 20px;
+}
+
+div#infodata ul.author-list {
+	margin-top: 40px;
+}
+
+.info-auth-heading {
+    font-weight: bold;
+    font-family: "Helvetica Neue";
+}
