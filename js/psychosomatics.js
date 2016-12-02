@@ -1,9 +1,25 @@
 
+/* Adding menu tabs. Order is important*/
 
+
+
+$('<div class="navwraper col-lg-7 col-md-7 col-sm-12 col-xs-12"><div>').prependTo('div.grid-cell');
+$('<nav class="navigational-tabs"></nav>').appendTo('div.navwraper.col-lg-7.col-md-7.col-sm-12.col-xs-12');
+$('<ul class="nav nav-tabs" role="tablist" id="myTabs"></ul>').appendTo("nav.navigational-tabs");
+
+$('<li role="presentation" class="active"></li>').appendTo('ul.nav.nav-tabs');
+$('<li role="presentation" class="figures-data"></li>').appendTo('ul.nav.nav-tabs');
+$('<li role="presentation" class="info"></li>').appendTo('ul.nav.nav-tabs');
+
+$('<a href="#article">' +'Article' + '</a>').appendTo('li.active');
+$('<a href="#figuresdata">' + 'Figures & data' + '</a>').appendTo('li.figures-data');
+$('<a href="#infodata">' + 'Info' + '</a>').appendTo('li.info');
 
 
 /* Bootstrap intra-article navigation */
 
+$('<div class="fornav col-lg-5 col-md-5" role="complementary" id="navwrap"></div>').prependTo('div.row.tab-content')
+$('<nav class="bs-docs-sidebar" id="myAffix"></nav>').appendTo('div.fornav.col-lg-5.col-md-5');
 $("nav.bs-docs-sidebar").prepend("<ul class='nav nav-tabs bs-docs-sidenav' id='navblock' role='tablist'></ul>");
 
 $("div.article-content h2").each(function(i) {
@@ -255,7 +271,7 @@ $("div.article-meta [data-aff]").preBind('click', function() {
 });
 
 
-
+$('a.auth-name').append(',');
 
 
 

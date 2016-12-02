@@ -5,7 +5,13 @@ body {
 	padding-left: 0px;
 }
 
+main>div.grid-cell {
+	padding: 1px;
+}
+
+
 /* Styling article metadata */
+
 ul.author-list {
     list-style-type: none;
     padding-left: 0px;
@@ -34,7 +40,7 @@ a.auth-name {
 	margin-top: 20px;
 	font-family: albert;
 }
-/* sticky inarticle navigation */
+/* Sticky inarticle navigation */
 
 .fornav {	
 	float: right;	
@@ -84,6 +90,14 @@ ul#navblock.nav.nav-tabs.bs-docs-sidenav > li > a:hover {
 	border-radius: 0;
 }
 
+ul.dates {
+	margin-bottom: 30px;
+}
+
+h3#abstr0 {
+	margin-top: 0;
+}
+
 /* Headings */
 
 h1 {
@@ -93,10 +107,17 @@ h1 {
 
 h2 {
 	font-size: 21px;
+	font-family: 'Avenir LT W01 85 Heavy';
+	color: #6d6e70;
+	font-weight: 400;
 }
 
 h3{
 	font-size: 17px;
+}
+
+h3.subtitle {
+	color: #6d6e70; 
 }
 
 
@@ -105,6 +126,31 @@ h3{
 
 .navwraper {
 	padding-left: 0;
+}
+nav.navigational-tabs>ul.nav.nav-tabs>li>a:hover {
+	background-color:  white;
+	border: 0;
+	border-top: 1px solid #563d7c;
+}
+
+.nav-tabs>li>a {
+    border-radius: 0;
+    margin-right: 0;
+}
+
+nav.navigational-tabs>ul.nav.nav-tabs>li.active>a:hover {
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid white;
+}
+#article {
+   border-left: 1px solid white!important;
+}
+
+nav.navigational-tabs>ul.nav.nav-tabs>li.active>a {
+    border-bottom: 1px solid white;	
+    border-radius: 0;
 }
 
 @media (min-width:992px) {
@@ -132,7 +178,7 @@ p.license-access {
 }
 
 
-/* pop-ups */
+/* Pop-ups */
 
 a.ref-tip {
 	cursor: pointer;
@@ -142,7 +188,7 @@ a.ref-tip {
 a.btn.btn-info {
 	padding: 0 6px 0 6px;
 	border: 0;
-	background: rgba(91, 192, 222, 0.2);
+	background: rgba(86, 61, 124, 0.1);
 	color: black;
 }
 
@@ -151,9 +197,8 @@ div.article-text {
 }
 
 
+
 /* page width */
-
-
 
 
 .grid-cell {
@@ -192,10 +237,11 @@ div.article-text {
 /* upper tabs navigation */
 
 .navwraper {
-	border-right: 1px solid #ececec;
+	border-right: 0;
 }
 
-/* Tables */
+
+/* Tables and Figures */
 
 .tab-pane.fade.active.in > .figure-wrap {
 	margin-top: 50px;
@@ -203,6 +249,16 @@ div.article-text {
 
 th {
 	text-align: center;
+}
+
+div.article-text .figure-wrap {
+	padding: 5px;
+	border-top: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
+}
+
+#figuresdata .figure-wrap {
+	
 }
 
 /* Info Panel */
@@ -227,12 +283,79 @@ div#infodata ul.author-list {
 
 .info-auth-heading {
     font-weight: bold;
-    font-family: "Helvetica Neue";
+    font-family: 'Avenir LT W01 85 Heavy';
+	color: #6d6e70;
+	font-size: 19px;
+}
+
+#infodata div.institution {
+	color: #6d6e70;
+	font-family: Helvetica;
 }
 
 
+/* Styling citations */
 
+li.ref {
+	margin-bottom: 10px;
+}
 
+span.bib {
+	display: block;
+	margin-left: 35px;
+}
+
+span.ref-title {
+	display: block;
+	color: rgb(77, 89, 102);
+	font-size: 120%;
+
+}
+
+span.ref-auth {
+	display: block;
+	font-size: 100%;
+	color: rgba(77, 89, 102, 0.8);
+}
+
+span.ref-source {
+	display: block;
+	font-size: 90%;
+	color: rgba(77, 89, 102, 0.8);
+	font-style: italic;
+}
+
+span.ref-full {
+	display: block;
+	font-style: italic;
+}
+
+a.fulltext {
+	color: rgb(86, 61, 124);
+}
+
+body {
+   counter-reset: item;
+ }
+ ol.references {
+   list-style: none;
+   padding-left: 0;
+ }
+ li.ref {
+   counter-increment: item;
+   margin-bottom: 5px;
+ }
+ li.ref:before {
+   margin-right: 10px;
+   content: counter(item);
+   background: rgba(86, 61, 124, 0.4);
+   border-radius: 100%;
+   color: white;
+   width: 1.5em;
+   text-align: center;
+   display: inline-block;
+   float: left;
+ }
 /* For Tablets abd Mobile */
 /**************************************************************************/
 /* Collapsible accordion panels*/
@@ -252,6 +375,10 @@ div.grid-cell {
 }
 
 @media (max-width: 991px) {
+
+h2.title {
+	font-family: arial;
+}
 
 div.panel {
 	margin-top: 20px;
